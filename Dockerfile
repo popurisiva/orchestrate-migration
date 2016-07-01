@@ -18,6 +18,5 @@ RUN cd /data01; pip install .
 ENV PYTHONPATH /data01:/usr/lib/python2.7/site-packages
 ENV NSS_HASH_ALG_SUPPORT=+MD5
 ENV OPENSSL_ENABLE_MD5_VERIFY=1
-ADD runner/ /data01/runner/
 WORKDIR /data01
 CMD ["python","/data01/load_data.py"]
