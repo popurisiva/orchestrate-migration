@@ -60,9 +60,8 @@ if __name__ == "__main__":
     parser.add_argument('--couch-pass', required=False, default=couch_pass, dest='couch_pass', help='couchbase pass.')
     parser.add_argument('--couch-bucket', required=False, default=couch_bucket, dest='couch_bucket', help='bucket.')
     args = parser.parse_args()
-    print args.couch_host
-    print args.couch_pass
-    print args.couch_bucket
+    print 'COUCH HOST : ' + args.couch_host
+    print 'COUCH BUCKET : ' + args.couch_bucket
     for file_obj in os.listdir(data_path):
         current = os.path.join(data_path, file_obj)
         if os.path.isfile(current):
