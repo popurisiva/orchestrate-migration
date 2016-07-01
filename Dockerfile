@@ -11,7 +11,7 @@ RUN wget http://packages.couchbase.com/releases/couchbase-release/couchbase-rele
 RUN rpm -ivh couchbase-release-1.0-0-x86_64.rpm
 RUN yum install -y libcouchbase-devel libcouchbase2-bin gcc gcc-c++
 RUN pip install couchbase
-RUN mkdir /data01; mkdir /data01/runner
+RUN mkdir /data01; mkdir /data01/data; mkdir /data01/failures
 ADD setup.py /data01/
 COPY . /data01
 RUN cd /data01; pip install .
